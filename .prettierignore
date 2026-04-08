@@ -1,0 +1,6 @@
+node_modules/
+.next/
+out/
+public/fonts/*.woff2
+*.tsbuildinfo
+next-env.d.ts

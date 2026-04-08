@@ -1,0 +1,210 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* BPK 커스텀 확장 컬러 */
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+
+  /* Primary 10단계 팔레트 */
+  --color-primary-50: oklch(0.970 0.154 260.824);
+  --color-primary-100: oklch(0.930 0.183 260.824);
+  --color-primary-200: oklch(0.870 0.226 260.824);
+  --color-primary-300: oklch(0.770 0.241 260.824);
+  --color-primary-400: oklch(0.670 0.241 260.824);
+  --color-primary-500: oklch(0.570 0.241 260.824);
+  --color-primary-600: oklch(0.480 0.241 260.824);
+  --color-primary-700: oklch(0.390 0.241 260.824);
+  --color-primary-800: oklch(0.310 0.241 260.824);
+  --color-primary-900: oklch(0.240 0.193 260.824);
+  --color-primary-950: oklch(0.170 0.136 260.824);
+
+  /* 타이포그래피 커스텀 스케일 */
+  --font-size-display: 3.75rem;
+  --font-size-display--line-height: 4.125rem;
+}
+
+:root {
+  /* ── 기본 ── */
+  --radius: 0.625rem;
+
+  /* ── 배경/전경 ── */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.208 0.042 265.755);
+
+  /* ── Card ── */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.208 0.042 265.755);
+
+  /* ── Popover ── */
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.208 0.042 265.755);
+
+  /* ── Primary (BPK Blue #0066FF) ── */
+  --primary: oklch(0.570 0.241 260.824);
+  --primary-foreground: oklch(0.985 0 0);
+
+  /* ── Secondary (Slate) ── */
+  --secondary: oklch(0.968 0.007 247.858);
+  --secondary-foreground: oklch(0.208 0.042 265.755);
+
+  /* ── Muted ── */
+  --muted: oklch(0.968 0.007 247.858);
+  --muted-foreground: oklch(0.554 0.046 257.417);
+
+  /* ── Accent ── */
+  --accent: oklch(0.968 0.007 247.858);
+  --accent-foreground: oklch(0.208 0.042 265.755);
+
+  /* ── Destructive (Red) ── */
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  /* ── Border / Input / Ring ── */
+  --border: oklch(0.929 0.013 255.508);
+  --input: oklch(0.929 0.013 255.508);
+  --ring: oklch(0.570 0.241 260.824);
+
+  /* ── 시맨틱 확장 (BPK 커스텀) ── */
+  --success: oklch(0.723 0.219 149.579);
+  --success-foreground: oklch(0.985 0 0);
+  --warning: oklch(0.768 0.189 70.08);
+  --warning-foreground: oklch(0.208 0.042 265.755);
+  --info: oklch(0.623 0.214 259.815);
+  --info-foreground: oklch(0.985 0 0);
+
+  /* ── Chart ── */
+  --chart-1: oklch(0.570 0.241 260.824);
+  --chart-2: oklch(0.723 0.219 149.579);
+  --chart-3: oklch(0.577 0.245 27.325);
+  --chart-4: oklch(0.768 0.189 70.08);
+  --chart-5: oklch(0.623 0.214 259.815);
+
+  /* ── Sidebar ── */
+  --sidebar: oklch(0.984 0.003 247.858);
+  --sidebar-foreground: oklch(0.208 0.042 265.755);
+  --sidebar-primary: oklch(0.570 0.241 260.824);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.968 0.007 247.858);
+  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  --sidebar-border: oklch(0.929 0.013 255.508);
+  --sidebar-ring: oklch(0.570 0.241 260.824);
+}
+
+/* ── 다크 모드 ── */
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+
+  --primary: oklch(0.670 0.241 260.824);
+  --primary-foreground: oklch(0.170 0.136 260.824);
+
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.670 0.241 260.824);
+
+  --success: oklch(0.780 0.180 149.579);
+  --success-foreground: oklch(0.170 0.050 149.579);
+  --warning: oklch(0.820 0.160 70.08);
+  --warning-foreground: oklch(0.170 0.050 70.08);
+  --info: oklch(0.700 0.180 259.815);
+  --info-foreground: oklch(0.170 0.050 259.815);
+
+  --chart-1: oklch(0.670 0.241 260.824);
+  --chart-2: oklch(0.780 0.180 149.579);
+  --chart-3: oklch(0.704 0.191 22.216);
+  --chart-4: oklch(0.820 0.160 70.08);
+  --chart-5: oklch(0.700 0.180 259.815);
+
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.670 0.241 260.824);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.670 0.241 260.824);
+}
+
+/* ── Ticker Animation ── */
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
