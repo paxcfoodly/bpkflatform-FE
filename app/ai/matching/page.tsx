@@ -141,7 +141,7 @@ export default function AiMatchingPage() {
         </h1>
         <p className="mt-2 text-muted-foreground max-w-2xl mx-auto text-balance">
           제품 포장의 앞면·뒷면 이미지를 업로드하면 AI가 포장형태를 분석하고,{" "}
-          최적의 포장장비를 추천해드립니다.
+          최적의 포장장비를 추천해드립니다.222
         </p>
       </div>
 
