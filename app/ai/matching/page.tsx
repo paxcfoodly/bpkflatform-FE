@@ -343,6 +343,30 @@ export default function AiMatchingPage() {
         </div>
       )}
 
+      {/* Uploaded images (shown alongside results) */}
+      {result && (frontPreview || backPreview) && (
+        <div className="grid grid-cols-2 gap-4 mt-6 mb-2">
+          {frontPreview && (
+            <div>
+              <p className="text-xs font-medium text-muted-foreground mb-1.5">앞면</p>
+              <div className="rounded-xl border overflow-hidden aspect-[4/3] bg-muted/30">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={frontPreview} alt="앞면" className="w-full h-full object-contain" />
+              </div>
+            </div>
+          )}
+          {backPreview && (
+            <div>
+              <p className="text-xs font-medium text-muted-foreground mb-1.5">뒷면</p>
+              <div className="rounded-xl border overflow-hidden aspect-[4/3] bg-muted/30">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={backPreview} alt="뒷면" className="w-full h-full object-contain" />
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
       {/* Results */}
       {result && (
         <div className="space-y-6 mt-2">
